@@ -1,0 +1,29 @@
+<template>
+  <div style="height: 1200 px; width: 600 px; background: white">
+    <div style="width: 200px; margin: 10px">
+      <span onkeypress={keyCheck}>
+        <lightning-input
+          type="text"
+          label="Search"
+          placeholder="Contacts"
+          onchange={handleInputChange}
+        ></lightning-input>
+      </span>
+    </div>
+
+    <c-check-boxes
+      ondatavaluechange={handleDataValueChange}
+      selected-val={selectedVal}
+      options={options}
+      check-box-value={checkbox}
+      table-data={tableValues}
+    >
+    </c-check-boxes>
+
+    <c-lightning-Table
+      get-value-of-data={value}
+      ononetimefunction={handleFunctionForOneTimeDataTable}
+    >
+    </c-lightning-Table>
+  </div>
+</template>

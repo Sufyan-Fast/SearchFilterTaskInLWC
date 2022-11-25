@@ -1,0 +1,21 @@
+<template>
+  <div style="margin: 10px">
+    <lightning-input
+      type="checkbox"
+      label="All"
+      checked={checkBoxValue}
+      onchange={oncheck}
+    >
+    </lightning-input>
+  </div>
+
+  <div style="margin: 10px">
+    <lightning-checkbox-group
+      name="Checkbox Group"
+      label="Recent Filters"
+      options={options}
+      value={selectedVal}
+      onchange={handleChange}
+    ></lightning-checkbox-group>
+  </div>
+</template>
